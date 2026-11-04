@@ -7,7 +7,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         while (true) {
             System.out.println();
-            System.out.println("1 Collection   2 List   3 Set   4 Map   5 Queue si Deque   0 iesire");
+            System.out.println("1 Iterable   2 Collection   3 List   4 Set   5 Map   6 Queue si Deque   0 iesire");
             if (!scanner.hasNextLine()) {
                 return;
             }
@@ -18,22 +18,25 @@ public class Main {
             System.out.println();
             switch (alegere) {
                 case "1":
-                    ExempluCollection.ruleaza();
+                    ExempluIterable.ruleaza();
                     break;
                 case "2":
-                    ExempluList.ruleaza();
+                    ExempluCollection.ruleaza();
                     break;
                 case "3":
-                    ExempluSet.ruleaza();
+                    ExempluList.ruleaza();
                     break;
                 case "4":
-                    ExempluMap.ruleaza();
+                    ExempluSet.ruleaza();
                     break;
                 case "5":
+                    ExempluMap.ruleaza();
+                    break;
+                case "6":
                     ExempluQueueDeque.ruleaza();
                     break;
                 default:
-                    System.out.println("Alege 1-5 sau 0.");
+                    System.out.println("Alege 1-6 sau 0.");
             }
         }
     }
